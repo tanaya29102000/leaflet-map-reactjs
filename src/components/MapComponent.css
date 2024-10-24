@@ -1,54 +1,64 @@
-/* Styling for the map container */
+/* Container for the map and form */
 .map-container {
-    height: 500px;
-    width: 100%;
-    border: 2px solid #4caf50;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    position: relative;
-  }
-  
-  /* Styling for the search form */
-  .search-form {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 10px;
-    z-index: 1000;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative; /* Position for absolute children */
   }
   
+  /* Form styling */
+  .search-form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 10px; /* Space below the form */
+  }
+  
+  /* Input styling */
   .search-input {
-    width: 300px;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
+    padding: 10px;
+    margin: 5px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Larger font size for better readability */
   }
   
-  .search-button {
-    padding: 8px 12px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  /* Button styling */
+  .search-button, .swap-button {
+    padding: 10px;
+    margin: 5px 0; /* Space between buttons */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
   }
   
-  .search-button:hover {
-    background-color: #45a049;
+  /* Button hover effect */
+  .search-button:hover, .swap-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
   }
   
   /* Error message styling */
   .error-message {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 16px;
+    color: red; /* Red text for errors */
+    margin-top: 10px; /* Space above error message */
+  }
+  
+  /* Leaflet map container */
+  .leaflet-container {
+    flex-grow: 1; /* Allow map to grow and fill available space */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Optional: Style for the polyline */
+  .leaflet-polyline {
+    stroke: blue; /* Set the color of the route line */
+    stroke-width: 5; /* Set the width of the line */
   }
   

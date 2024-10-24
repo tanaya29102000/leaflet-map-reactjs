@@ -1,13 +1,11 @@
-// App.js
 import React from 'react';
-import MapComponent from './components/MapComponent';
-import 'leaflet/dist/leaflet.css';
+import Mygeolocation from "./components/Mygeolocation";
 
 function App() {
   return (
     <div className="App">
       <h1>Leaflet Map in React</h1>
-      <MapComponent />
+      <Mygeolocation />
     </div>
   );
 }
